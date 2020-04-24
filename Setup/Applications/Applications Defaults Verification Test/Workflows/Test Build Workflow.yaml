@@ -14,12 +14,28 @@ phases:
   phaseSteps:
   - type: PREPARE_STEPS
     name: Prepare Steps
+    steps:
+    - type: SHELL_SCRIPT
+      name: Shell Script
+      properties:
+        commandPath: null
+        connectionAttributes: null
+        executeOnDelegate: true
+        host: null
+        outputVars: ''
+        publishAsVar: false
+        scriptString: echo ${app.defaults.TEST_VAR}
+        scriptType: BASH
+        sshKeyRef: null
+        sweepingOutputName: null
+        sweepingOutputScope: null
+        tags: ''
+        templateExpressions: null
+        templateVariables: ''
+        timeoutMillis: 60000
     stepsInParallel: false
   - type: COLLECT_ARTIFACT
     name: Collect Artifact
-    steps:
-    - type: ARTIFACT_COLLECTION
-      name: Artifact Collection
     stepsInParallel: false
   - type: WRAP_UP
     name: Wrap Up
