@@ -7,7 +7,5 @@ defaults:
   value: $HOME/${app.name}/${service.name}/${env.name}/runtime
 - name: STAGING_PATH
   value: $HOME/${app.name}/${service.name}/${env.name}/staging/${timestampId}
-- name: TEST_VAR
-  value: Automation-new
 - name: WINDOWS_RUNTIME_PATH
   value: '%USERPROFILE%\${app.name}\${service.name}\${env.name}\runtime'
